@@ -9,7 +9,8 @@ public class DummyDic {
     public static void main(String[] args) {
         DummyDic dummyDic = new DummyDic();
         System.out.println(dummyDic.engToRus("Germans"));
-        String result =  dummyDic.engToRus("Pizdec");
+        String result = dummyDic.engToRus("Pizdec");
         System.out.println(result);
     }
 }
+

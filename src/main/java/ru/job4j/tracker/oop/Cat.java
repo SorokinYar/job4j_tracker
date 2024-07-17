@@ -21,5 +21,9 @@ public class Cat {
         kot.giveNick("Murka");
         kot.eat("Pork");
         kot.show();
+        Cat kisa = new Cat();
+        kisa.giveNick("Nagaya");
+        kisa.eat("Chiken");
+        kisa.show();
     }
 }

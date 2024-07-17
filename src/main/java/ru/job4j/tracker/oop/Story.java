@@ -8,5 +8,12 @@ public class Story {
         girl.help(petya);
         wolf.eat(girl);
         petya.kill(wolf);
+
+        Pioneer vasya = new Pioneer();
+        Girl masha =  new Girl();
+        Wolf seriy = new Wolf();
+        masha.help(vasya);
+        wolf.eat(masha);
+        vasya.kill(seriy);
     }
 }

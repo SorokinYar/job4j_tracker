@@ -6,8 +6,8 @@ public class ArrayLoop {
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = i * 2 + 3;
         }
-        for (int i = 0; i < numbers.length; i++) {
-            System.out.println( "Значение ячейки " + i + " равно " + numbers[i]);
+        for (int number : numbers) {
+            System.out.println( "Значение ячейки равно: " + number);
         }
     }
 }

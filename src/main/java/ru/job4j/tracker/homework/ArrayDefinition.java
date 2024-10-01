@@ -9,6 +9,7 @@ public class ArrayDefinition {
         float[] prises = new float[40];
         System.out.println("Размер массива равен: " + prises.length);
 
+
         String[] names = new String[4];
         names[0] = "Petr";
         System.out.println(names[0]);

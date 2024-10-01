@@ -1,6 +1,7 @@
 package ru.job4j.tracker.homework;
 
 public class Square {
+
     public static int[] calculate(int bound) {
         int[] result = new int[bound];
         for (int i = 0; i < result.length; i++) {

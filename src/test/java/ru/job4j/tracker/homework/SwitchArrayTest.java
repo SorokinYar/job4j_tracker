@@ -22,4 +22,14 @@ class SwitchArrayTest {
         assertThat(result).containsExactly(expected);
     }
 
+    @Test
+    void swapIndex0And2() {
+        int[] array = new int[] {1, 2, 3};
+        int source = 0;
+        int destination = 2;
+        int[] result = SwitchArray.swap(array, source, destination);
+        int[] expected = new int[] {3, 2, 1};
+        assertThat(result).containsExactly(expected);
+    }
+
 }

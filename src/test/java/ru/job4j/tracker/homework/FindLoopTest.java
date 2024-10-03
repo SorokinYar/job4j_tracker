@@ -23,4 +23,26 @@ class FindLoopTest {
         int expected = -1;
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    void whetElementFound() {
+        int[] data = new int[] {1, 2, 3, 4, 5};
+        int element = 3;
+        int start = 1;
+        int finish = 4;
+        int result = FindLoop.indexRange(data, element, start, finish);
+        int expected = 2;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whetElementNotFound() {
+        int[] data = new int[] {1, 2, 3, 4, 5};
+        int element = 1;
+        int start = 1;
+        int finish = 4;
+        int result = FindLoop.indexRange(data, element, start, finish);
+        int expected = - 1;
+        assertThat(result).isEqualTo(expected);
+    }
 }

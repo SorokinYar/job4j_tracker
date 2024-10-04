@@ -39,4 +39,17 @@ class MatrixSumTest {
         assertThat(result).isEqualTo(expected);
     }
 
+    @Test
+    void whenFour() {
+        int[][] array = {
+                {1, 2, 3},
+                {1, 2, 3},
+                {1, 2, 3},
+                {1, 2, 3}
+        };
+        int expected = 24;
+        int result = MatrixSum.sum(array);
+        assertThat(result).isEqualTo(expected);
+    }
+
 }

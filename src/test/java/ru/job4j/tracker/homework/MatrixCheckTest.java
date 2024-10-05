@@ -30,4 +30,40 @@ class MatrixCheckTest {
         assertThat(result).isFalse();
     }
 
+    @Test
+    void whenHasBonoVertical() {
+        char[][] board = {
+                {'X', 'X', ' '},
+                {'X', ' ', 'X'},
+                {'X', ' ', ' '}
+        };
+        int column = 0;
+        boolean result = MatrixCheck.monoVertical(board, column);
+        assertThat(result).isTrue();
+    }
+
+    @Test
+    void whenNotHasMonoVertical() {
+        char[][] board = {
+                {' ', 'X', ' '},
+                {'X', ' ', 'X'},
+                {'X', ' ', ' '}
+        };
+        int column = 0;
+        boolean result = MatrixCheck.monoVertical(board,column);
+        assertThat(result).isFalse();
+    }
+
+    @Test
+    void whenNotHasMonoVerticalMiddle() {
+        char[][] board = {
+                {' ', ' ', ' '},
+                {'X', ' ', 'X'},
+                {'X', ' ', ' '}
+        };
+        int column = 1;
+        boolean result = MatrixCheck.monoVertical(board,column);
+        assertThat(result).isFalse();
+    }
+
 }

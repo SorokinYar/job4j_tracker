@@ -51,7 +51,7 @@ class MatrixCheckTest {
         };
         int column = 0;
         boolean result = MatrixCheck.monoVertical(board,column);
-        assertThat(result).isFalse(); // не закомитилось
+        assertThat(result).isFalse();
     }
 
     @Test

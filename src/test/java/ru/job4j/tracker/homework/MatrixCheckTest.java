@@ -3,7 +3,6 @@ package ru.job4j.tracker.homework;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class MatrixCheckTest {
     @Test
@@ -50,7 +49,7 @@ class MatrixCheckTest {
                 {'X', ' ', ' '}
         };
         int column = 0;
-        boolean result = MatrixCheck.monoVertical(board,column);
+        boolean result = MatrixCheck.monoVertical(board, column);
         assertThat(result).isFalse();
     }
 
@@ -62,8 +61,32 @@ class MatrixCheckTest {
                 {'X', ' ', ' '}
         };
         int column = 1;
-        boolean result = MatrixCheck.monoVertical(board,column);
+        boolean result = MatrixCheck.monoVertical(board, column);
         assertThat(result).isFalse();
     }
+
+    @Test
+    void whenArraySize2() {
+        char[][] board = {
+                {'X', ' '},
+                {' ', 'C'}
+        };
+        char[] expected = {'X', 'C'};
+        char[] result = MatrixCheck.extractDiagonal(board);
+        assertThat(result).containsExactly(expected);
+    }
+
+    @Test
+    void whevArraySize4() {
+        char[][] board = {
+                {'q', ' ', ' ', 'r'},
+                {'q', 'w', ' ', 'r'},
+                {'q', ' ', 'e', 'r'},
+                {'q', ' ', ' ', 'r'}
+    };
+        char[] expected = {'q', 'w', 'e', 'r'};
+        char[] result = MatrixCheck.extractDiagonal(board);
+        assertThat(result).containsExactly(expected);
+}
 
 }
